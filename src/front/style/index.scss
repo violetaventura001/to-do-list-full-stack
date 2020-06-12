@@ -1,16 +1,13 @@
 @import "~bootstrap/scss/bootstrap.scss";
 
-
 * {
   box-sizing: border-box;
 }
-
 
 ul {
   margin: 0;
   padding: 0;
 }
-
 
 ul li {
   cursor: pointer;
@@ -20,23 +17,19 @@ ul li {
   font-size: 18px;
   transition: 0.2s;
 
-  
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
 }
 
-
 ul li:nth-child(odd) {
   background: #f9f9f9;
 }
 
-
 ul li:hover {
   background: #ddd;
 }
-
 
 ul li.checked {
   background: #888;
@@ -44,9 +37,8 @@ ul li.checked {
   text-decoration: line-through;
 }
 
-
 ul li.checked::before {
-  content: '';
+  content: "";
   position: absolute;
   border-color: #fff;
   border-style: solid;
@@ -57,7 +49,6 @@ ul li.checked::before {
   height: 15px;
   width: 7px;
 }
-
 
 .close {
   position: absolute;
@@ -71,21 +62,18 @@ ul li.checked::before {
   color: white;
 }
 
-
 .header {
-  background-color: #f44336;
+  background-color: #368ff4;
   padding: 30px 40px;
   color: white;
   text-align: center;
 }
-
 
 .header:after {
   content: "";
   display: table;
   clear: both;
 }
-
 
 input {
   margin: 0;
@@ -96,7 +84,6 @@ input {
   float: left;
   font-size: 16px;
 }
-
 
 .addBtn {
   padding: 10px;
@@ -113,3 +100,4 @@ input {
 
 .addBtn:hover {
   background-color: #bbb;
+}
