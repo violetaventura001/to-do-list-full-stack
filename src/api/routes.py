@@ -12,13 +12,23 @@ todos =[]
 
 @api.route('/todos', methods=['GET'])
 def get_todos():
-    return jsonify(todos)
+    return jsonify(todos) , 200
 
 @api.route('/todos', methods=['POST'])
 def post_todos():
+    
     payload = request.json
-    return jsonify(payload)
+    todos.append(payload[("title")])
 
-@api.route('/todos', methods=['DELETE'])
-def delete_todos():
     return jsonify(todos), 200
+
+@api.route('/todos/<int:position>', methods=['DELETE'])
+def delete_todos(position):
+    global todos
+    
+    if len(todos) < position:
+            return "Position does not matach", 400
+    else:
+        todos.pop(position)
+        
+        return jsonify(todos), 200
